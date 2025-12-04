@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>大运河的文化</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+        html,body{
+        	    width:100%;
+              	height:100%;
+              	margin:0px;
+              } 
+		body{
+			color: #000000;
+			line-height: 1.6;
+		}
+		ul{
+			    list-style-type:none;
+		      	margin:0px auto;
+		      	padding:0px;
+		      }
+		.menu{
+		      	background-color:#353535;
+		      	color:#ffffff;
+		      	width:100%;
+				font-family: 隶书;
+				font-size: 24px;
+		      }
+		.menu ul{
+			    width:100%;
+		      	display:flex;
+		      	justify-content:center;
+		      }
+		.menu ul li{
+			    width:33%;
+		      	line-height:50px;
+		      	text-align:center;
+		      	position: relative;
+				overflow: hidden;
+				transition: all 0.3s ease;
+			}
+		.menu ul li a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #ffffff;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		.menu ul li.active {
+			background-color: #753F2D;
+			font-weight: bold;
+		}
+		.menu ul li.active a {
+			color: #ffffff;
+			font-weight: bold;
+		}
+		.menu ul li a:hover {
+			color: #ffffff;
+			text-decoration: underline;
+		}
+        .header-content {
+			font-family: 隶书;
+			width:100%;
+			height:200px;
+			background-color:#000000;
+            margin: 0px auto;
+            padding: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background-image: url("img/biaotihezi.png");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position-y: 50%;
+			color:#ffffff;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            margin: 5px auto 0; 
+        }
+		h1{
+			font-size: 60px;
+			margin-bottom: 0; 
+		}
+		.wenxue{
+			background-color: antiquewhite;
+		}
+		.minsu{
+			background-color: #EEDCCB;
+		}
+		.jianzhu{
+			background-color: #EED7C9;
+		}
+		.parent{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 20px;
+	
+		}
+		.parent div{
+			width: 32%;
+			height:540px;
+			border-radius: 15px;
+			text-align: center;
+			font-family: 幼圆;
+			border:4px solid #753F2D;
+			transition: all 0.3s ease;
+		}
+		/* 交互效果样式 */
+		.menu ul li:hover {
+			background-color: #555555;
+			cursor: pointer;
+			transform: scale(1.05);
+		}
+		.menu ul li.active:hover {
+			background-color: #753F2D;
+			transform: scale(1.05);
+		}
+		.ripple {
+			position: absolute;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.5);
+			transform: scale(0);
+			animation: ripple-animation 0.6s ease-out;
+		}
+		@keyframes ripple-animation {
+			to {
+				transform: scale(4);
+				opacity: 0;
+			}
+		}
+		/* 主题切换样式 */
+		.dark-mode {
+			background-color: #1a1a1a;
+			color: #f0f0f0;
+		}
+		/* 图片悬停效果 */
+		.parent img {
+			transition: transform 0.3s ease;
+		}
+		
+		/* 音乐控制按钮样式 */
+		.music-control {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 50px;
+			height: 50px;
+			background-color: rgba(117, 63, 45, 0.8);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			z-index: 1000;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+		
+		.music-control:hover {
+			background-color: rgba(117, 63, 45, 1);
+			transform: scale(1.1);
+		}
+		
+		#music-icon {
+			font-size: 24px;
+			color: white;
+			transition: all 0.3s ease;
+		}
+		
+		.music-playing #music-icon {
+			animation: pulse 1.5s infinite;
+		}
+		
+		@keyframes pulse {
+			0% { transform: scale(1); }
+			50% { transform: scale(1.2); }
+			100% { transform: scale(1); }
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>大运河文化之旅</h1>
+            <p class="subtitle">从古到今，探索世界上最长、最古老的人工水道所承载的丰富文化内涵</p>
+        </div>
+    </header>
+	<div class="menu">
+	      <ul>
+	        <!-- TODO: 添加实际的首页链接地址 -->
+	        <li><a href="#home" title="网站首页">网站首页</a></li>
+	        <!-- TODO: 添加实际的运河历史页面链接地址 -->
+	        <li><a href="#history" title="运河历史">运河历史</a></li>
+	        <li class="active">运河文化</li>
+	      </ul>
+	</div>
+	<div class="parent">
+		<div class="wenxue">
+			<p><h2>文学艺术</h2></p>
+			<img src="img/qingming.jpg" width="350px" height="150px" style="margin-left: 0px;"/>
+			<img src="img/kunqu.png" width="110px" height="150px" style="margin-left: 0px;"/>
+			<p><h3>著名文学作品：</h3></p>
+			<p>"汴水流，泗水流，流到瓜洲古渡头。吴山点点愁。" —— 白居易《长相思》</p>
+			<p>白居易《隋堤柳》、柳永《望海潮》、《红楼梦》、《水浒传》……</p>
+			<p><h3>艺术形式：</h3>《清明上河图》描绘运河繁华、扬剧、淮剧等地方戏曲、运河沿岸的书法碑刻……</p>
+		</div>
+		
+		<div class="minsu">
+			<p><h2>民俗风情</h2></p>
+			<img src="img/minsu.png" width="330px" height="150px" style="float:left;"/>
+			<img src="img/cai.png" width="150px" height="150px" style="float:left;"/>
+			<p><h3>传统节日与庆典：</h3>开漕节、船工祭祀河神仪式、运河龙舟赛……</p>
+			<p><h3>饮食文化：</h3>淮扬菜系、杭帮菜系、特色船菜、南北风味融合……</p>
+			<p><h3>民间信仰：</h3>河神崇拜、龙王庙祭祀、祈求航行平安</p>
+		</div>
+		
+		<div class="jianzhu">
+			<p><h2>建筑遗产</h2></p>
+			<img src="img/jianzhu.png" width="200px" height="150px" style="float:left;"/>
+			<img src="img/suzhouqiao.jpg" width="280px" height="150px" style="float:left;"/>
+			<p><h3>水利工程：</h3>淮安清江大闸、杭州拱宸桥、古代船闸系统……</p>
+			<p><h3>古桥建筑：</h3>苏州宝带桥、北京八里桥、扬州五亭桥……</p>
+			<p><h3>历史街区：</h3>扬州东关街、杭州桥西直街、苏州山塘街</p>
+		</div>
+	</div>
+	
+	<!-- 背景音乐 -->
+	<audio id="background-music" loop>
+		<source src="music/音乐.mp3" type="audio/mpeg">
+		您的浏览器不支持音频元素。
+	</audio>
+	
+	<!-- 音乐控制按钮 -->
+	<div id="music-control" class="music-control">
+		<span id="music-icon">🎵</span>
+	</div>
+	
+	<script src="js/interactive.js"></script>
+</body>
+</html>
